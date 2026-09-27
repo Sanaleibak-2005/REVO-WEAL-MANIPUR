@@ -1,0 +1,2534 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>REVO WEAL MANIPUR</title>
+
+<meta name="description"
+content="REVO WEAL MANIPUR — Revolutionaries for a Wealthier Manipur.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+
+<style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root{
+    --forest:#061d14;
+    --forest-dark:#03140d;
+    --forest-light:#0b3b25;
+    --green:#116b3b;
+    --green-bright:#1d8a4d;
+    --lime:#a4d45d;
+    --gold:#d5b45b;
+
+    --cream:#f2f6ee;
+    --white:#ffffff;
+
+    --text:#17231c;
+    --muted:#657169;
+
+    --border:rgba(15,70,40,.12);
+
+    --shadow:0 25px 70px rgba(3,35,21,.12);
+
+    --max:1180px;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Inter",sans-serif;
+    background:var(--cream);
+    color:var(--text);
+    line-height:1.75;
+    overflow-x:hidden;
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    font-family:inherit;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container{
+    width:min(92%,var(--max));
+    margin:auto;
+}
+
+
+/* =========================================================
+   BACKGROUND GREENERY EFFECT
+========================================================= */
+
+body::before{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    left:-230px;
+    top:-200px;
+    border-radius:50%;
+    background:#5da85d;
+    filter:blur(110px);
+    opacity:.12;
+    pointer-events:none;
+    z-index:-5;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:550px;
+    height:550px;
+    right:-250px;
+    bottom:0;
+    border-radius:50%;
+    background:#0d7545;
+    filter:blur(120px);
+    opacity:.10;
+    pointer-events:none;
+    z-index:-5;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    transition:.3s ease;
+}
+
+header.scrolled{
+    background:rgba(3,25,16,.94);
+    backdrop-filter:blur(18px);
+    box-shadow:0 8px 35px rgba(0,0,0,.18);
+}
+
+.nav{
+    min-height:80px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+
+/* LOGO */
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:white;
+}
+
+.brand img{
+    width:48px;
+    height:48px;
+    object-fit:contain;
+    border-radius:50%;
+    filter:drop-shadow(0 6px 14px rgba(0,0,0,.3));
+}
+
+.brand-text{
+    display:flex;
+    flex-direction:column;
+    line-height:1.1;
+}
+
+.brand-title{
+    font-size:15px;
+    font-weight:800;
+    letter-spacing:1.5px;
+}
+
+.brand-sub{
+    font-size:8px;
+    letter-spacing:2px;
+    opacity:.65;
+    margin-top:4px;
+}
+
+
+/* NAV LINKS */
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:28px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:rgba(255,255,255,.88);
+    font-size:13px;
+    font-weight:600;
+    transition:.25s;
+}
+
+.nav-links a:hover{
+    color:var(--lime);
+}
+
+
+/* MOBILE BUTTON */
+
+.menu-btn{
+    display:none;
+    background:none;
+    border:0;
+    color:white;
+    font-size:27px;
+    cursor:pointer;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    color:white;
+
+    background:
+        linear-gradient(
+            125deg,
+            rgba(3,25,16,.98),
+            rgba(7,56,33,.92),
+            rgba(9,85,46,.76)
+        );
+}
+
+
+/* decorative dots */
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    opacity:.10;
+
+    background-image:
+        radial-gradient(circle at 10% 20%,white 1px,transparent 1px),
+        radial-gradient(circle at 80% 70%,white 1px,transparent 1px);
+
+    background-size:80px 80px,130px 130px;
+}
+
+
+/* large circle */
+
+.hero::after{
+    content:"";
+    position:absolute;
+
+    width:700px;
+    height:700px;
+
+    right:-330px;
+    top:-270px;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    border-radius:50%;
+
+    box-shadow:
+        0 0 0 80px rgba(255,255,255,.025),
+        0 0 0 160px rgba(255,255,255,.015);
+}
+
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:900px;
+    padding:145px 0 90px;
+}
+
+
+/* HERO LOGO */
+
+.hero-logo{
+    width:125px;
+    height:125px;
+    object-fit:contain;
+    margin-bottom:28px;
+
+    filter:
+        drop-shadow(
+            0 16px 30px rgba(0,0,0,.32)
+        );
+}
+
+
+/* EYEBROW */
+
+.eyebrow{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    text-transform:uppercase;
+
+    letter-spacing:4px;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    color:var(--lime);
+
+    margin-bottom:20px;
+}
+
+.eyebrow::before{
+    content:"";
+    width:35px;
+    height:1px;
+    background:var(--lime);
+}
+
+
+/* HERO TITLE */
+
+.hero h1{
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(48px,8vw,92px);
+
+    line-height:.98;
+
+    letter-spacing:-3px;
+
+    margin-bottom:24px;
+}
+
+.hero h1 span{
+    color:var(--lime);
+}
+
+
+.hero-subtitle{
+    font-size:clamp(15px,2vw,20px);
+    color:rgba(255,255,255,.82);
+    margin-bottom:30px;
+}
+
+
+/* MOTTO */
+
+.motto{
+    display:inline-block;
+
+    padding:15px 21px;
+
+    border-left:3px solid var(--gold);
+
+    background:rgba(255,255,255,.07);
+
+    backdrop-filter:blur(10px);
+
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(17px,2.5vw,25px);
+
+    font-style:italic;
+}
+
+
+/* BUTTONS */
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    margin-top:35px;
+}
+
+.btn{
+    min-height:50px;
+    padding:0 24px;
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:100px;
+
+    font-size:13px;
+    font-weight:700;
+
+    transition:.3s ease;
+}
+
+.btn-primary{
+    background:var(--lime);
+    color:#082416;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 30px rgba(155,207,83,.25);
+}
+
+.btn-outline{
+    color:white;
+    border:1px solid rgba(255,255,255,.3);
+    background:rgba(255,255,255,.04);
+}
+
+.btn-outline:hover{
+    background:rgba(255,255,255,.1);
+    transform:translateY(-3px);
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+section{
+    padding:100px 0;
+    position:relative;
+}
+
+.section-heading{
+    max-width:800px;
+    margin-bottom:50px;
+}
+
+.section-label{
+    color:var(--green);
+    text-transform:uppercase;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:3px;
+    margin-bottom:13px;
+}
+
+.section-heading h2{
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(35px,5vw,58px);
+
+    line-height:1.1;
+
+    color:var(--forest);
+
+    margin-bottom:18px;
+}
+
+.section-heading p{
+    color:var(--muted);
+    font-size:16px;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.intro{
+    background:white;
+}
+
+.intro-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.intro-text p{
+    color:#536058;
+    margin-bottom:20px;
+}
+
+
+/* STATEMENT */
+
+.statement{
+    margin-top:28px;
+
+    padding:30px;
+
+    border-radius:26px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0a3522,
+            #126b3a
+        );
+
+    color:white;
+
+    box-shadow:var(--shadow);
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.statement::after{
+    content:"🌿";
+
+    position:absolute;
+
+    font-size:110px;
+
+    right:-8px;
+    bottom:-38px;
+
+    opacity:.07;
+}
+
+.statement p{
+    color:white;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:24px;
+
+    line-height:1.45;
+
+    position:relative;
+
+    z-index:1;
+}
+
+
+/* MEANING CARD */
+
+.meaning-card{
+    background:#edf4e8;
+
+    border-radius:35px;
+
+    padding:55px;
+
+    min-height:390px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    border:1px solid rgba(18,107,58,.08);
+}
+
+.big-word{
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(48px,6vw,82px);
+
+    line-height:1;
+
+    color:var(--green);
+
+    margin-bottom:22px;
+}
+
+.meaning-card p{
+    color:var(--muted);
+}
+
+
+/* =========================================================
+   VISION
+========================================================= */
+
+.vision{
+    background:#e8f0e4;
+}
+
+.vision-box{
+    background:
+        linear-gradient(
+            135deg,
+            rgba(5,35,22,.98),
+            rgba(14,91,49,.94)
+        );
+
+    color:white;
+
+    border-radius:35px;
+
+    padding:70px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+}
+
+.vision-box::before{
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+    height:450px;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    border-radius:50%;
+
+    right:-150px;
+    top:-190px;
+}
+
+.vision-box .section-label{
+    color:var(--lime);
+    position:relative;
+}
+
+.vision-box h2{
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(35px,5vw,60px);
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+    position:relative;
+}
+
+.vision-box p{
+    max-width:880px;
+
+    font-size:18px;
+
+    color:rgba(255,255,255,.8);
+
+    position:relative;
+}
+
+.vision-box p+p{
+    margin-top:20px;
+}
+
+
+/* =========================================================
+   PRINCIPLES
+========================================================= */
+
+.principles{
+    background:white;
+}
+
+.principles-grid{
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:18px;
+}
+
+.principle{
+    padding:30px 25px;
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+
+    background:#fbfcfa;
+
+    transition:.3s ease;
+}
+
+.principle:hover{
+    transform:translateY(-7px);
+
+    box-shadow:
+        0 18px 45px
+        rgba(12,65,36,.1);
+
+    border-color:
+        rgba(31,138,76,.25);
+}
+
+.principle-number{
+    font-size:12px;
+
+    color:var(--green);
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    margin-bottom:15px;
+}
+
+.principle h3{
+    color:var(--forest);
+
+    font-size:18px;
+
+    margin-bottom:10px;
+}
+
+.principle p{
+    color:var(--muted);
+
+    font-size:13px;
+
+    line-height:1.7;
+}
+
+
+/* =========================================================
+   YOUTH
+========================================================= */
+
+.youth{
+    background:var(--forest);
+    color:white;
+}
+
+.youth .section-label{
+    color:var(--lime);
+}
+
+.youth .section-heading h2{
+    color:white;
+}
+
+.youth .section-heading p{
+    color:rgba(255,255,255,.7);
+}
+
+.youth-content{
+    display:grid;
+
+    grid-template-columns:
+        1.4fr .8fr;
+
+    gap:50px;
+
+    align-items:stretch;
+}
+
+.youth-text{
+    color:rgba(255,255,255,.75);
+
+    font-size:16px;
+}
+
+.youth-text p{
+    margin-bottom:20px;
+}
+
+.democracy-card{
+    background:rgba(255,255,255,.07);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:28px;
+
+    padding:40px;
+
+    backdrop-filter:blur(10px);
+}
+
+.democracy-card h3{
+    color:var(--lime);
+
+    font-family:"Playfair Display",serif;
+
+    font-size:28px;
+
+    margin-bottom:22px;
+}
+
+.democracy-card ul{
+    list-style:none;
+}
+
+.democracy-card li{
+    padding:10px 0;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.09);
+
+    color:
+        rgba(255,255,255,.78);
+
+    font-size:14px;
+}
+
+.democracy-card li::before{
+    content:"✓";
+
+    color:var(--lime);
+
+    margin-right:10px;
+
+    font-weight:800;
+}
+
+.democracy-line{
+    margin-top:28px;
+
+    padding-top:20px;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.12);
+
+    color:white;
+
+    font-weight:700;
+}
+
+
+/* =========================================================
+   WEALTHIER MANIPUR
+========================================================= */
+
+.wealth{
+    background:#f4f6ef;
+}
+
+.wealth-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:18px;
+}
+
+.wealth-item{
+    background:white;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    border:1px solid var(--border);
+
+    transition:.3s ease;
+}
+
+.wealth-item:hover{
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(12,65,36,.08);
+}
+
+.wealth-item span{
+    display:block;
+
+    font-size:29px;
+
+    margin-bottom:14px;
+}
+
+.wealth-item h3{
+    color:var(--forest);
+
+    margin-bottom:7px;
+
+    font-size:17px;
+}
+
+.wealth-item p{
+    color:var(--muted);
+
+    font-size:13px;
+}
+
+.wealth-quote{
+    margin-top:45px;
+
+    text-align:center;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(28px,4vw,45px);
+
+    color:var(--green);
+}
+
+
+/* =========================================================
+   PURPOSE
+========================================================= */
+
+.purpose{
+    background:white;
+}
+
+.purpose-box{
+    max-width:950px;
+
+    margin:auto;
+
+    text-align:center;
+
+    padding:75px 40px;
+
+    border-radius:35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #edf5e9,
+            #f9fbf5
+        );
+
+    border:
+        1px solid
+        rgba(18,107,58,.1);
+}
+
+.purpose-box h2{
+    font-family:"Playfair Display",serif;
+
+    font-size:
+        clamp(35px,5vw,58px);
+
+    color:var(--forest);
+
+    margin-bottom:25px;
+}
+
+.purpose-box p{
+    max-width:800px;
+
+    margin:auto;
+
+    font-size:19px;
+
+    color:var(--muted);
+}
+
+
+/* =========================================================
+   HIJAM IRABOT
+========================================================= */
+
+.irabot{
+    background:
+        linear-gradient(
+            135deg,
+            #082719,
+            #104f2d
+        );
+
+    color:white;
+}
+
+.irabot-grid{
+    display:grid;
+
+    grid-template-columns:
+        .8fr 1.4fr;
+
+    gap:65px;
+
+    align-items:center;
+}
+
+
+/* PHOTO FRAME */
+
+.irabot-photo{
+    min-height:500px;
+
+    border-radius:35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.08),
+            rgba(0,0,0,.18)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.1);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:25px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 25px 60px
+        rgba(0,0,0,.25);
+}
+
+.irabot-photo::before{
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+    height:420px;
+
+    border:
+        1px solid
+        rgba(155,207,83,.12);
+
+    border-radius:50%;
+}
+
+.irabot-photo img{
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    max-width:330px;
+
+    height:420px;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    border-radius:18px;
+
+    filter:
+        grayscale(8%)
+        contrast(1.05);
+
+    box-shadow:
+        0 25px 50px
+        rgba(0,0,0,.4);
+}
+
+.irabot-caption{
+    position:absolute;
+
+    z-index:3;
+
+    bottom:18px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:calc(100% - 70px);
+
+    text-align:center;
+
+    padding:10px 15px;
+
+    border-radius:100px;
+
+    background:
+        rgba(4,25,16,.82);
+
+    backdrop-filter:blur(10px);
+
+    color:white;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+}
+
+
+/* IRABOT TEXT */
+
+.irabot .section-label{
+    color:var(--lime);
+}
+
+.irabot h2{
+    font-family:"Playfair Display",serif;
+
+    font-size:
+        clamp(36px,5vw,60px);
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+}
+
+.irabot p{
+    color:rgba(255,255,255,.75);
+
+    margin-bottom:20px;
+}
+
+
+/* VALUES */
+
+.values{
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:10px;
+
+    margin-top:30px;
+}
+
+.value{
+    padding:13px 15px;
+
+    border-left:
+        2px solid
+        var(--lime);
+
+    background:
+        rgba(255,255,255,.04);
+
+    color:
+        rgba(255,255,255,.85);
+
+    font-size:13px;
+}
+
+
+/* =========================================================
+   LEGACY
+========================================================= */
+
+.legacy{
+    background:#f7f8f3;
+
+    text-align:center;
+}
+
+.legacy-content{
+    max-width:820px;
+
+    margin:auto;
+}
+
+.legacy-content h2{
+    font-family:"Playfair Display",serif;
+
+    color:var(--forest);
+
+    font-size:
+        clamp(38px,5vw,62px);
+
+    line-height:1.15;
+
+    margin-bottom:25px;
+}
+
+.legacy-content p{
+    color:var(--muted);
+
+    font-size:17px;
+
+    margin-bottom:20px;
+}
+
+.legacy-mantra{
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:30px;
+}
+
+.legacy-mantra span{
+    padding:10px 18px;
+
+    border-radius:100px;
+
+    background:#e3eddf;
+
+    color:var(--green);
+
+    font-size:13px;
+
+    font-weight:700;
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.final{
+    background:
+        linear-gradient(
+            135deg,
+            #071f16,
+            #0d5d34
+        );
+
+    color:white;
+
+    text-align:center;
+
+    padding:120px 0;
+
+    overflow:hidden;
+}
+
+.final::before{
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+    height:650px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    border-radius:50%;
+
+    left:50%;
+    top:50%;
+
+    transform:
+        translate(-50%,-50%);
+}
+
+.final-content{
+    position:relative;
+
+    z-index:2;
+}
+
+.final-logo{
+    width:105px;
+    height:105px;
+
+    object-fit:contain;
+
+    margin:
+        0 auto 27px;
+
+    filter:
+        drop-shadow(
+            0 15px 30px
+            rgba(0,0,0,.3)
+        );
+}
+
+.final h2{
+    font-family:"Playfair Display",serif;
+
+    font-size:
+        clamp(42px,7vw,78px);
+
+    line-height:1;
+
+    margin-bottom:18px;
+}
+
+.final h3{
+    font-size:
+        clamp(12px,2vw,18px);
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    color:var(--lime);
+
+    margin-bottom:28px;
+}
+
+.final .motto{
+    margin-bottom:35px;
+}
+
+.jai{
+    font-family:"Playfair Display",serif;
+
+    font-size:30px;
+
+    margin-top:45px;
+
+    color:rgba(255,255,255,.9);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    background:#04150e;
+
+    color:rgba(255,255,255,.55);
+
+    text-align:center;
+
+    padding:30px 20px;
+
+    font-size:11px;
+}
+
+footer strong{
+    color:rgba(255,255,255,.85);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:950px){
+
+    .nav-links{
+        position:absolute;
+
+        top:78px;
+
+        left:4%;
+
+        width:92%;
+
+        display:none;
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:0;
+
+        background:
+            rgba(4,25,16,.98);
+
+        border:
+            1px solid
+            rgba(255,255,255,.1);
+
+        border-radius:18px;
+
+        overflow:hidden;
+
+        box-shadow:
+            0 20px 50px
+            rgba(0,0,0,.25);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .nav-links a{
+        display:block;
+
+        padding:14px 20px;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .intro-grid,
+    .youth-content,
+    .irabot-grid{
+        grid-template-columns:1fr;
+    }
+
+    .principles-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .wealth-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:600px){
+
+    section{
+        padding:75px 0;
+    }
+
+    .hero-content{
+        padding:
+            125px 0
+            70px;
+    }
+
+    .hero-logo{
+        width:95px;
+        height:95px;
+    }
+
+    .hero h1{
+        font-size:48px;
+        letter-spacing:-2px;
+    }
+
+    .motto{
+        font-size:17px;
+    }
+
+    .meaning-card,
+    .vision-box,
+    .purpose-box{
+        padding:35px 25px;
+    }
+
+    .principles-grid,
+    .wealth-grid{
+        grid-template-columns:1fr;
+    }
+
+    .values{
+        grid-template-columns:1fr;
+    }
+
+    .democracy-card{
+        padding:28px;
+    }
+
+    .irabot-photo{
+        min-height:390px;
+        padding:20px;
+    }
+
+    .irabot-photo img{
+        height:340px;
+        max-width:270px;
+    }
+
+    .irabot-caption{
+        width:calc(100% - 50px);
+    }
+
+    .final{
+        padding:90px 0;
+    }
+
+    .final h2{
+        font-size:45px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<header id="header">
+
+<div class="container nav">
+
+
+<a href="#home" class="brand">
+
+<img
+src="https://files.catbox.moe/2s8ph1.png"
+alt="REVO WEAL MANIPUR Logo"
+>
+
+<div class="brand-text">
+
+<span class="brand-title">
+REVO WEAL
+</span>
+
+<span class="brand-sub">
+MANIPUR
+</span>
+
+</div>
+
+</a>
+
+
+<button
+class="menu-btn"
+id="menuBtn"
+aria-label="Open menu"
+>
+☰
+</button>
+
+
+<ul class="nav-links" id="navLinks">
+
+<li>
+<a href="#about">About</a>
+</li>
+
+<li>
+<a href="#vision">Vision</a>
+</li>
+
+<li>
+<a href="#principles">Principles</a>
+</li>
+
+<li>
+<a href="#youth">Youth</a>
+</li>
+
+<li>
+<a href="#irabot">Inspiration</a>
+</li>
+
+</ul>
+
+</div>
+
+</header>
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<main>
+
+<section class="hero" id="home">
+
+<div class="container">
+
+<div class="hero-content">
+
+
+<img
+class="hero-logo"
+src="https://files.catbox.moe/2s8ph1.png"
+alt="REVO WEAL MANIPUR"
+>
+
+
+<div class="eyebrow">
+A Vision for Manipur
+</div>
+
+
+<h1>
+
+REVO WEAL
+<br>
+
+<span>MANIPUR</span>
+
+</h1>
+
+
+<p class="hero-subtitle">
+
+REVOLUTIONARIES FOR A WEALTHIER MANIPUR
+
+</p>
+
+
+<div class="motto">
+
+“A New Era of Unity, Self-Reliance &amp; Prosperity.”
+
+</div>
+
+
+<div class="hero-buttons">
+
+<a
+href="#about"
+class="btn btn-primary"
+>
+Explore
+</a>
+
+<a
+href="#principles"
+class="btn btn-outline"
+>
+Our Principles
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WHY REVO WEAL MANIPUR?
+========================================================= -->
+
+<section class="intro" id="about">
+
+<div class="container">
+
+
+<div class="intro-grid">
+
+
+<div class="intro-text">
+
+
+<div class="section-heading">
+
+<div class="section-label">
+WHY REVO WEAL MANIPUR?
+</div>
+
+<h2>
+WHY REVO WEAL MANIPUR?
+</h2>
+
+</div>
+
+
+<p>
+
+Manipur has the people, talent, resources and potential to build a stronger future. But potential becomes prosperity only when it is developed through unity, knowledge, self-reliance and collective effort.
+
+</p>
+
+
+<p>
+
+REVO WEAL MANIPUR exists to turn that potential into real opportunity and lasting prosperity—so that people can learn, work, create, build and live with dignity.
+
+</p>
+
+
+<div class="statement">
+
+<p>
+
+Manipur should not merely have a future.
+
+<br><br>
+
+Manipur should have the strength to shape its own future.
+
+</p>
+
+</div>
+
+
+</div>
+
+
+
+<div class="meaning-card">
+
+
+<div class="big-word">
+CHANGE.
+</div>
+
+
+<p>
+
+Revolutionaries — people committed to positive, peaceful and transformative change.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     VISION
+========================================================= -->
+
+<section class="vision" id="vision">
+
+<div class="container">
+
+
+<div class="vision-box">
+
+
+<div class="section-label">
+OUR VISION
+</div>
+
+
+<h2>
+OUR VISION
+</h2>
+
+
+<p>
+
+A Manipur where people have the knowledge to grow, the opportunity to work, the ability to create, the capacity to become self-reliant, and the dignity to build meaningful lives.
+
+</p>
+
+
+<p>
+
+A Manipur that advances with modern development while preserving its identity, heritage and natural environment.
+
+</p>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PRINCIPLES
+========================================================= -->
+
+<section class="principles" id="principles">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<div class="section-label">
+OUR PRINCIPLES
+</div>
+
+<h2>
+OUR PRINCIPLES
+</h2>
+
+</div>
+
+
+
+<div class="principles-grid">
+
+
+<article class="principle">
+
+<div class="principle-number">
+01
+</div>
+
+<h3>
+UNITY
+</h3>
+
+<p>
+Working together toward a shared future.
+</p>
+
+</article>
+
+
+<article class="principle">
+
+<div class="principle-number">
+02
+</div>
+
+<h3>
+SELF-RELIANCE
+</h3>
+
+<p>
+Building our own capabilities, production and opportunities.
+</p>
+
+</article>
+
+
+<article class="principle">
+
+<div class="principle-number">
+03
+</div>
+
+<h3>
+HUMAN DEVELOPMENT
+</h3>
+
+<p>
+Putting education, health, skills and dignity at the centre of progress.
+</p>
+
+</article>
+
+
+<article class="principle">
+
+<div class="principle-number">
+04
+</div>
+
+<h3>
+ECONOMIC STRENGTH
+</h3>
+
+<p>
+Creating conditions for farmers, workers, entrepreneurs, artisans and professionals to prosper.
+</p>
+
+</article>
+
+
+<article class="principle">
+
+<div class="principle-number">
+05
+</div>
+
+<h3>
+INNOVATION
+</h3>
+
+<p>
+Using science, technology and creativity to solve problems and create possibilities.
+</p>
+
+</article>
+
+
+<article class="principle">
+
+<div class="principle-number">
+06
+</div>
+
+<h3>
+SUSTAINABILITY
+</h3>
+
+<p>
+Developing responsibly while protecting the land and resources of future generations.
+</p>
+
+</article>
+
+
+<article class="principle">
+
+<div class="principle-number">
+07
+</div>
+
+<h3>
+GOOD GOVERNANCE
+</h3>
+
+<p>
+Upholding transparency, accountability and effective public service.
+</p>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     YOUTH & DEMOCRATIC LEADERSHIP
+========================================================= -->
+
+<section class="youth" id="youth">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<div class="section-label">
+YOUTH &amp; DEMOCRATIC LEADERSHIP
+</div>
+
+<h2>
+YOUTH &amp; DEMOCRATIC LEADERSHIP
+</h2>
+
+</div>
+
+
+
+<div class="youth-content">
+
+
+<div class="youth-text">
+
+
+<p>
+
+Youth are not merely the future of Manipur; they are part of its present responsibility.
+
+</p>
+
+
+<p>
+
+Young people should be educated, politically aware and actively engaged in democracy—examining leaders by their character, public record, ideas, integrity and commitment to public service.
+
+</p>
+
+
+<p>
+
+The strength of democratic change begins with informed citizens who choose their representatives thoughtfully and hold them accountable.
+
+</p>
+
+
+<p>
+
+Do not follow blindly.
+
+Understand. Question. Participate. Choose responsibly.
+
+</p>
+
+
+</div>
+
+
+
+<div class="democracy-card">
+
+<h3>
+Democratic Responsibility
+</h3>
+
+<p>
+
+The strength of democratic change begins with informed citizens who choose their representatives thoughtfully and hold them accountable.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WHAT “WEALTHIER MANIPUR” MEANS
+========================================================= -->
+
+<section class="wealth">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<div class="section-label">
+WHAT “WEALTHIER MANIPUR” MEANS
+</div>
+
+<h2>
+WHAT “WEALTHIER MANIPUR” MEANS
+</h2>
+
+</div>
+
+
+<p style="max-width:850px;color:var(--muted);font-size:17px;margin-bottom:40px;">
+
+A wealthier Manipur is not measured by money alone.
+
+</p>
+
+
+
+<div class="wealth-grid">
+
+
+<div class="wealth-item">
+
+<span>📚</span>
+
+<h3>
+Education
+</h3>
+
+<p>
+Better education.
+</p>
+
+</div>
+
+
+<div class="wealth-item">
+
+<span>🏥</span>
+
+<h3>
+Healthcare
+</h3>
+
+<p>
+Stronger healthcare.
+</p>
+
+</div>
+
+
+<div class="wealth-item">
+
+<span>🌾</span>
+
+<h3>
+Agriculture
+</h3>
+
+<p>
+Meaningful work and productive agriculture.
+</p>
+
+</div>
+
+
+<div class="wealth-item">
+
+<span>🏗️</span>
+
+<h3>
+Infrastructure
+</h3>
+
+<p>
+Modern infrastructure.
+</p>
+
+</div>
+
+
+<div class="wealth-item">
+
+<span>💼</span>
+
+<h3>
+Opportunity
+</h3>
+
+<p>
+Growing enterprise and greater opportunity.
+</p>
+
+</div>
+
+
+<div class="wealth-item">
+
+<span>🌱</span>
+
+<h3>
+Environment
+</h3>
+
+<p>
+A protected environment and cultural strength.
+</p>
+
+</div>
+
+
+</div>
+
+
+
+<p style="margin-top:35px;color:var(--muted);font-size:17px;">
+
+It is reflected in better education, stronger healthcare, meaningful work, productive agriculture, growing enterprise, modern infrastructure, greater opportunity, social harmony, cultural strength and a protected environment.
+
+</p>
+
+
+<div class="wealth-quote">
+
+Prosperity must be felt in people's lives.
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     OUR PURPOSE
+========================================================= -->
+
+<section class="purpose">
+
+<div class="container">
+
+
+<div class="purpose-box">
+
+
+<div class="section-label">
+OUR PURPOSE
+</div>
+
+
+<h2>
+OUR PURPOSE
+</h2>
+
+
+<p>
+
+To develop Manipur's potential into lasting prosperity through unity, self-reliance, human development and responsible progress.
+
+</p>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     INSPIRATION OF HIJAM IRABOT
+========================================================= -->
+
+<section class="irabot" id="irabot">
+
+<div class="container">
+
+
+<div class="irabot-grid">
+
+
+<div class="irabot-photo">
+
+
+<img
+src="https://files.catbox.moe/2ucdx6.jpg"
+alt="Hijam Irabot"
+>
+
+
+<div class="irabot-caption">
+HIJAM IRABOT
+</div>
+
+
+</div>
+
+
+
+<div>
+
+
+<div class="section-label">
+THE INSPIRATION OF HIJAM IRABOT
+</div>
+
+
+<h2>
+THE INSPIRATION OF HIJAM IRABOT
+</h2>
+
+
+<p>
+
+REVO WEAL MANIPUR draws inspiration from Hijam Irabot, an important figure in modern Manipur's history whose public life was associated with social reform, education, political awakening, peasant organization, cultural development and public participation.
+
+</p>
+
+
+<p>
+
+His legacy reminds us that lasting change requires an aware, educated and responsible people.
+
+</p>
+
+
+<p>
+We carry forward the values of:
+</p>
+
+
+<div class="values">
+
+
+<div class="value">
+Unity.
+</div>
+
+<div class="value">
+Education.
+</div>
+
+<div class="value">
+Social uplift.
+</div>
+
+<div class="value">
+Dignity of working people.
+</div>
+
+<div class="value">
+People's participation.
+</div>
+
+<div class="value">
+Cultural strength.
+</div>
+
+<div class="value">
+Self-reliance.
+</div>
+
+<div class="value">
+Collective responsibility.
+</div>
+
+
+</div>
+
+
+<p style="margin-top:30px;">
+
+We respect the lessons of the past while developing our own response to the challenges of the present.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     LEGACY
+========================================================= -->
+
+<section class="legacy">
+
+<div class="container">
+
+
+<div class="legacy-content">
+
+
+<div class="section-label">
+THE LEGACY WE CARRY FORWARD
+</div>
+
+
+<h2>
+THE LEGACY WE CARRY FORWARD
+</h2>
+
+
+<p>
+
+Remember the ideals.
+
+<br>
+
+Understand the present.
+
+<br>
+
+Build the future.
+
+</p>
+
+
+<p>
+
+The task is not to recreate another era.
+
+</p>
+
+
+<p>
+
+It is to build our own era—with the wisdom of the past, the realities of the present and the aspirations of the future.
+
+</p>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FINAL
+========================================================= -->
+
+<section class="final">
+
+<div class="container">
+
+
+<div class="final-content">
+
+
+<img
+class="final-logo"
+src="https://files.catbox.moe/2s8ph1.png"
+alt="REVO WEAL MANIPUR"
+>
+
+
+<h2>
+
+REVO WEAL
+<br>
+MANIPUR
+
+</h2>
+
+
+<h3>
+
+REVOLUTIONARIES FOR A WEALTHIER MANIPUR
+
+</h3>
+
+
+<div class="motto">
+
+“A New Era of Unity, Self-Reliance &amp; Prosperity.”
+
+</div>
+
+
+<div class="jai">
+
+Jai Hind.
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+<strong>
+REVO WEAL MANIPUR
+</strong>
+
+<br><br>
+
+REVOLUTIONARIES FOR A WEALTHIER MANIPUR
+
+<br><br>
+
+© <span id="year"></span> REVO WEAL MANIPUR.
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+/* Header */
+
+const header =
+document.getElementById("header");
+
+window.addEventListener("scroll",()=>{
+
+    if(window.scrollY>40){
+
+        header.classList.add("scrolled");
+
+    }else{
+
+        header.classList.remove("scrolled");
+
+    }
+
+});
+
+
+/* Mobile menu */
+
+const menuBtn =
+document.getElementById("menuBtn");
+
+const navLinks =
+document.getElementById("navLinks");
+
+menuBtn.addEventListener("click",()=>{
+
+    navLinks.classList.toggle("active");
+
+    menuBtn.textContent =
+        navLinks.classList.contains("active")
+        ? "✕"
+        : "☰";
+
+});
+
+
+/* Close menu */
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        navLinks.classList.remove("active");
+
+        menuBtn.textContent="☰";
+
+    });
+
+});
+
+
+/* Year */
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  
+</body>
+
+</html>
