@@ -214,7 +214,7 @@ header.scrolled{
 .hero-content{
     position:relative;
     z-index:2;
-    max-width:900px;
+    max-width:950px;
     padding:145px 0 90px;
 }
 
@@ -263,7 +263,7 @@ header.scrolled{
     margin-bottom:15px;
 }
 
-/* New Custom Subtitle Banner for Date, Day & Landmark */
+/* Metadata Banner */
 .hero-meta-details {
     font-size: 12px;
     letter-spacing: 1px;
@@ -273,8 +273,59 @@ header.scrolled{
     border-radius: 8px;
     display: inline-block;
     backdrop-filter: blur(8px);
-    margin-bottom: 30px;
+    margin-bottom: 22px;
     border: 1px solid rgba(164, 212, 93, 0.2);
+}
+
+/* Beautiful Redesigned Live Counter Panel */
+.live-counter-panel {
+    background: linear-gradient(135deg, rgba(6, 40, 25, 0.85), rgba(3, 20, 13, 0.95));
+    border: 1px solid rgba(164, 212, 93, 0.35);
+    padding: 20px 24px;
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    margin-bottom: 30px;
+    max-width: 650px;
+}
+
+.counter-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.counter-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    text-align: center;
+}
+
+.counter-box {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 4px;
+    border-radius: 10px;
+}
+
+.counter-value {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--lime);
+    line-height: 1.1;
+}
+
+.counter-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 4px;
 }
 
 .motto{
@@ -890,6 +941,10 @@ footer strong{
     .wealth-grid{
         grid-template-columns:repeat(2,1fr);
     }
+    .counter-grid{
+        grid-template-columns:repeat(3, 1fr);
+        gap:8px;
+    }
 }
 
 @media(max-width:600px){
@@ -982,9 +1037,22 @@ footer strong{
 
 <p class="hero-subtitle">REVOLUTIONARIES FOR A WEALTHIER MANIPUR</p>
 
-<!-- Updated Landmark, Date & Day Details -->
+<!-- Landmark, Date & Day Details -->
 <div class="hero-meta-details">
     Sunday, September 27, 2026 &bull; Sembuningthou Sembileima Temple ISHOK, MANIPUR, INDIA
+</div>
+
+<!-- Beautiful Live Counter Grid Panel -->
+<div class="live-counter-panel">
+    <div class="counter-title">Live Active Timer</div>
+    <div class="counter-grid" id="live-counter">
+        <div class="counter-box"><div class="counter-value" id="c-years">--</div><div class="counter-label">Years</div></div>
+        <div class="counter-box"><div class="counter-value" id="c-months">--</div><div class="counter-label">Months</div></div>
+        <div class="counter-box"><div class="counter-value" id="c-days">--</div><div class="counter-label">Days</div></div>
+        <div class="counter-box"><div class="counter-value" id="c-hours">--</div><div class="counter-label">Hours</div></div>
+        <div class="counter-box"><div class="counter-value" id="c-minutes">--</div><div class="counter-label">Mins</div></div>
+        <div class="counter-box"><div class="counter-value" id="c-seconds">--</div><div class="counter-label">Secs</div></div>
+    </div>
 </div>
 
 <div class="motto">“A New Era of Unity, Self-Reliance &amp; Prosperity.”</div>
@@ -1234,7 +1302,49 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 });
 
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// --- Beautiful Live Counter Script ---
+const startDate = new Date(2026, 8, 27, 7, 30, 0); // September 27, 2026, 7:30:00 AM
+
+function updateLiveCounter() {
+    const now = new Date();
+    let diff = now - startDate;
+
+    if (diff < 0) {
+        document.getElementById("live-counter").innerHTML = "<div style='grid-column: span 6; color: var(--lime); font-size:14px; padding:10px;'>The start time is in the future!</div>";
+        return;
+    }
+
+    const seconds = Math.floor(diff / 1000) % 60;
+    const minutes = Math.floor(diff / (1000 * 60)) % 60;
+    const hours = Math.floor(diff / (1000 * 60 * 60)) % 24;
+    
+    let years = now.getFullYear() - startDate.getFullYear();
+    let months = now.getMonth() - startDate.getMonth();
+    let days = now.getDate() - startDate.getDate();
+
+    if (days < 0) {
+        months--;
+        const lastMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+        days += lastMonth.getDate();
+    }
+
+    if (months < 0) {
+        years--;
+        months += 12;
+    }
+
+    document.getElementById("c-years").innerText = String(years).padStart(2, '0');
+    document.getElementById("c-months").innerText = String(months).padStart(2, '0');
+    document.getElementById("c-days").innerText = String(days).padStart(2, '0');
+    document.getElementById("c-hours").innerText = String(hours).padStart(2, '0');
+    document.getElementById("c-minutes").innerText = String(minutes).padStart(2, '0');
+    document.getElementById("c-seconds").innerText = String(seconds).padStart(2, '0');
+}
+
+setInterval(updateLiveCounter, 1000);
+updateLiveCounter();
 </script>
 
 </body>
-</html>
+    </html>
